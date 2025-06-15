@@ -106,7 +106,8 @@ function Codearena({ problemTitle }) {
   const handleAiReview = async () => {
     try {
       setLoadingAi(true);
-      const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/ai-review`, { code });
+      // const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/ai-review`, { code });
+      const { data } = await axios.post(`${import.meta.env.VITE_GOOGLE_GEMINI_API_URL}/ai-review`, { code });
       setAiReview(data.review);
     } catch (error) {
       setAiReview('Error in AI review, error: ' + error.message);
