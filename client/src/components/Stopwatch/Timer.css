@@ -1,0 +1,40 @@
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#time{
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+.start{
+    background-color: greenyellow;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+.stop{
+    background-color: red;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+.reset{
+    background-color: yellow;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+#status{
+    font-size: 20px;
+    margin-top: 0.1px;
+}
