@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SignUp from "../Components/SignUp"; // this includes login modal
+import SignUp from "../components/SignUp"; // this includes login modal
 import { useAuth } from "../AuthContext"; // ✅ import AuthContext
 
 const Navbar = () => {
