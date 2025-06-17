@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+console.log("Loaded BACKEND_URL2 from env:", process.env.BACKEND_URL2);
 const app = express();
 const {DBConnection} = require('./database/db.js')
 const bcrypt = require('bcryptjs')
