@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom';
 import Editor from 'react-simple-code-editor';
 import Prism from 'prismjs';
 import ReactMarkdown from 'react-markdown';
-const dotenv = require('dotenv');
-dotenv.config();
 
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
