@@ -7,9 +7,6 @@ const User = require('./models/User.js')
 const Problem=require('./models/Problems.js')
 const ContestProblem =require('./models/Contestset.js')
 require('dotenv').config();
-const { generateFile } = require('../backend_2.0/generateFile.js');
-const { generateInputFile } = require('../backend_2.0/generateInputFile.js');
-const { executeCpp } = require('../backend_2.0/executeCpp.js');
 const cors = require('cors');
 const axios = require('axios');
 
