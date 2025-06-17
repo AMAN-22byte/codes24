@@ -177,7 +177,7 @@ app.post("/submit", async (req, res) => {
 
     try {
         // Forward request to compiler server (port 8000)
-        const response = await axios.post(`${process.env.VITE_BACKEND_URL}/submit`, { language, code, problemId,userId });
+        const response = await axios.post(`${process.env.VITE_BACKEND_URL2}/submit`, { language, code, problemId,userId });
         console.log("Forwarding to port 8000 with problemId:", problemId);
         console.log("userId being sent:", userId);
         res.json(response.data);
