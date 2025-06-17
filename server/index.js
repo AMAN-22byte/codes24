@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
 const {DBConnection} = require('./database/db.js')
 const bcrypt = require('bcryptjs')
@@ -6,7 +7,6 @@ const jwt = require('jsonwebtoken')
 const User = require('./models/User.js')
 const Problem=require('./models/Problems.js')
 const ContestProblem =require('./models/Contestset.js')
-require('dotenv').config();
 const cors = require('cors');
 const axios = require('axios');
 
@@ -171,14 +171,14 @@ app.get('/problems/:title', async (req, res) => {
 app.post("/submit", async (req, res) => {
     const { language = 'cpp', code, problemId,userId } = req.body;
     console.log("Forwarding to port 8000 with problemId:", problemId);
-    console.log("Backend URL being used:", process.env.VITE_BACKEND_URL2);
+    console.log("Backend URL being used:", process.env.BACKEND_URL2);
     if (!code || !problemId) {
         return res.status(400).json({ success: false, error: "Code or problemId missing!" });
     }
 
     try {
         // Forward request to compiler server (port 8000)
-        const response = await axios.post(`${process.env.VITE_BACKEND_URL2}/submit`, { language, code, problemId,userId });
+        const response = await axios.post(`${process.env.BACKEND_URL2}/submit`, { language, code, problemId,userId });
         console.log("Forwarding to port 8000 with problemId:", problemId);
         console.log("userId being sent:", userId);
         res.json(response.data);
