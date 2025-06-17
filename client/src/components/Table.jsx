@@ -20,7 +20,7 @@ const getDifficultyCell = (difficulty) => {
 const Table = () => {
     const [problems,setProblems] = useState([])
     useEffect(() => {
-    axios.get('http://localhost:5000/')
+    axios.get(`${import.meta.env.VITE_MAIN_BACKEND}/`)
       .then(res => setProblems(res.data))
       .catch(err => console.error(err));
   }, []);

@@ -70,7 +70,7 @@ const Compiler_LCS = () => {
   useEffect(() => {
     const fetchProblem = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/problems/${title}`);
+        const res = await axios.get(`${import.meta.env.VITE_MAIN_BACKEND}/problems/${title}`);
         setProblemData(res.data);
       } catch (err) {
         console.error("Failed to fetch problem:", err);

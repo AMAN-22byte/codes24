@@ -41,9 +41,9 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link to ="/dashboard" className="text-sm font-medium text-gray-500 hover:text-purple-700 hidden md:block">
+          {/* <Link to ="/dashboard" className="text-sm font-medium text-gray-500 hover:text-purple-700 hidden md:block">
           Dashboard
-          </Link>
+          </Link> */}
 
           {user ? (
             // ✅ Logout button if user is logged in

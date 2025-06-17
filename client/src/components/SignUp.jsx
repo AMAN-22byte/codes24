@@ -32,7 +32,7 @@ const Login = ({ onClose }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch(`${import.meta.env.VITE_MAIN_BACKEND}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

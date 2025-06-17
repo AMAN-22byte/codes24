@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import Editor from 'react-simple-code-editor';
 import Prism from 'prismjs';
 import ReactMarkdown from 'react-markdown';
+const dotenv = require('dotenv');
+dotenv.config();
 
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
@@ -58,7 +60,7 @@ function Codearena({ problemTitle }) {
     if (!problemTitle) return;
     const fetchProblem = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/problems/${encodeURIComponent(problemTitle)}`);
+        const res = await axios.get(`${import.meta.env.VITE_MAIN_BACKEND}/problems/${encodeURIComponent(problemTitle)}`);
         const problem = res.data;
         setProblemId(problem._id);
       } catch (err) {
@@ -83,7 +85,7 @@ function Codearena({ problemTitle }) {
       return;
     }
     try {
-      const { data } = await axios.post(`http://localhost:5000/submit`, {
+      const { data } = await axios.post(`${import.meta.env.VITE_MAIN_BACKEND}/submit`, {
         language,
         code,
         problemId,
