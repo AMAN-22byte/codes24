@@ -163,7 +163,7 @@ app.post("/ai-review", async (req, res) => {
 
 
 app.post("/submit", async (req, res) => {
-  console.log(">>> /submit HIT on port 8000 <<<");
+  // console.log(">>> /submit HIT on port 8000 <<<");
   const { language = 'cpp', code, problemId, userId } = req.body;
 
   if (!code || !problemId) {
