@@ -108,6 +108,7 @@ function Codearena({ problemTitle }) {
       setLoadingAi(true);
       // const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/ai-review`, { code });
       const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/ai-review`, { code });
+      console.log("AI Review URL:", import.meta.env.VITE_BACKEND_URL);
       setAiReview(data.review);
     } catch (error) {
       setAiReview('Error in AI review, error: ' + error.message);
