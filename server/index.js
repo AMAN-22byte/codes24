@@ -12,8 +12,6 @@ const cors = require('cors');
 const axios = require('axios');
 
 app.use(cors());
-
-const port = 3000;
 DBConnection();
 
 app.use(express.json())
