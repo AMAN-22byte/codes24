@@ -94,9 +94,9 @@ const Loginkaro = ({ onClose }) => {
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
-                <FaEye className="text-gray-500" />
-              ) : (
                 <FaEyeSlash className="text-gray-500" />
+              ) : (
+                <FaEye className="text-gray-500" />
               )}
             </div>
           </div>

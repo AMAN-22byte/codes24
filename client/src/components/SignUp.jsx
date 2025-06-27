@@ -123,7 +123,7 @@ const Login = ({ onClose }) => {
               className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <FaEye className="text-gray-500" /> : <FaEyeSlash className="text-gray-500" />}
+              {showPassword ? <FaEyeSlash className="text-gray-500" /> : <FaEye className="text-gray-500" />}
             </div>
           </div>
 
@@ -144,7 +144,7 @@ const Login = ({ onClose }) => {
           <button
             type="submit"
             className="w-full bg-purple-600 text-white py-2 rounded-[30px] hover:bg-purple-700 transition">
-            Register
+            Next
           </button>
         </form>
 
